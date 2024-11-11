@@ -8,7 +8,7 @@ namespace ManagementCabin.Controllers
     [ApiController]
     public class CastomerController : ControllerBase
     {
-        static List<Castomer> castomers = new List<Castomer>();
+        static List<Castomer> castomers = new List<Castomer> { new Castomer { id = 1 } };
         // GET: api/<CastomerController>
         [HttpGet]
         public List<Castomer> Get()
