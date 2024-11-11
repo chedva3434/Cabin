@@ -18,9 +18,12 @@ namespace ManagementCabin.Controllers
 
         // GET api/<OrdersController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public ActionResult Get(int id)
         {
-            return "value";
+            var order=orders.Find(x => x.Id == id);
+            if (order == null)
+                return NotFound();
+            return Ok(order);
         }
 
         // POST api/<OrdersController>

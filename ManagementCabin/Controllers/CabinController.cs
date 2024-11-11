@@ -18,6 +18,14 @@ namespace ManagementCabin.Controllers
             return CabinList;
         }
 
+        [HttpGet("{id}")]
+        public ActionResult Get(int id)
+        {
+            var order = CabinList.Find(x => x.Id == id);
+            if (order == null)
+                return NotFound();
+            return Ok(order);
+        }
 
         // POST api/<CabinController>
         [HttpPost]

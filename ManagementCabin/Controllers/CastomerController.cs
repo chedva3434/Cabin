@@ -17,11 +17,15 @@ namespace ManagementCabin.Controllers
         }
 
         // GET api/<CastomerController>/5
-        //[HttpGet("{id}")]
-        //public string Get(int id)
-        //{
-        //    return "value";
-        //}
+        [HttpGet("{id}")]
+        public ActionResult Get(int id)
+        {
+            var order = castomers.Find(x => x.id == id);
+            if (order == null)
+                return NotFound();
+            return Ok(order);
+        }
+
 
         // POST api/<CastomerController>
         [HttpPost]
