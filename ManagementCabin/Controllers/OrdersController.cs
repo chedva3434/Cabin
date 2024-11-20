@@ -8,19 +8,26 @@ namespace ManagementCabin.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        static List<Order> orders = new List<Order>();
+        private readonly IDataContext _context;
+
+        public OrdersController(IDataContext context)
+        {
+            _context = context;
+        }
+
+
         // GET: api/<OrdersController>
         [HttpGet]
         public IEnumerable<Order> Get()
         {
-            return orders;
+            return _context.Orders;
         }
 
         // GET api/<OrdersController>/5
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
-            var order=orders.Find(x => x.Id == id);
+            var order= _context.Orders.Find(x => x.Id == id);
             if (order == null)
                 return NotFound();
             return Ok(order);
@@ -30,18 +37,18 @@ namespace ManagementCabin.Controllers
         [HttpPost]
         public void Post([FromBody] Order newOrder)
         {
-            orders.Add(newOrder);
+            _context.Orders.Add(newOrder);
         }
 
         // PUT api/<OrdersController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] DateTime d)
         {
-            for (int i = 0; i < orders.Count; i++)
+            for (int i = 0; i < _context.Orders.Count; i++)
             {
-                if (orders[i].Id == id)
+                if (_context.Orders[i].Id == id)
                 {
-                    orders[i].dateOfOrder=d;
+                    _context.Orders[i].dateOfOrder=d;
                 }
             }
         }
@@ -50,11 +57,11 @@ namespace ManagementCabin.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            for(int i = 0;i < orders.Count;i++)
+            for(int i = 0;i < _context.Orders.Count;i++)
             {
-                if (orders[i].Id == id)
+                if (_context.Orders[i].Id == id)
                 {
-                    orders.RemoveAt(i);
+                    _context.Orders.RemoveAt(i);
                 }
             }
         }

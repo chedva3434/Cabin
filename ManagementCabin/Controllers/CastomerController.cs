@@ -8,19 +8,26 @@ namespace ManagementCabin.Controllers
     [ApiController]
     public class CastomerController : ControllerBase
     {
-        static List<Castomer> castomers = new List<Castomer> { new Castomer { id = 1 } };
+        private readonly IDataContext _context;
+
+        public CastomerController(IDataContext context)
+        {
+            _context = context;
+        }
+
+
         // GET: api/<CastomerController>
         [HttpGet]
-        public List<Castomer> Get()
+        public IEnumerable<Castomer> Get()
         {
-           return castomers;
+           return _context.Castomers;
         }
 
         // GET api/<CastomerController>/5
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
-            var order = castomers.Find(x => x.id == id);
+            var order = _context.Castomers.Find(x => x.id == id);
             if (order == null)
                 return NotFound();
             return Ok(order);
@@ -31,19 +38,19 @@ namespace ManagementCabin.Controllers
         [HttpPost]
         public void Post([FromBody] Castomer newCastomer)
         {
-            castomers.Add(newCastomer);
+            _context.Castomers.Add(newCastomer);
         }
 
         // PUT api/<CastomerController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string name,string phone)
         {
-            for (int i = 0; i < castomers.Count; i++)
+            for (int i = 0; i < _context.Castomers.Count; i++)
             {
-                if (castomers[i].id == id)
+                if (_context.Castomers[i].id == id)
                 {
-                    castomers[i].name = name;
-                    castomers[i].phone = phone;
+                    _context.Castomers[i].name = name;
+                    _context.Castomers[i].phone = phone;
                 }
             }
         }
@@ -52,11 +59,11 @@ namespace ManagementCabin.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            for (int i = 0; i < castomers.Count; i++)
+            for (int i = 0; i < _context.Castomers.Count; i++)
             {
-                if (castomers[i].id == id)
+                if (_context.Castomers[i].id == id)
                 {
-                    castomers.RemoveAt(i);
+                    _context.Castomers.RemoveAt(i);
                     return;
                 }
 

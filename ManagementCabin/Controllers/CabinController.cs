@@ -9,19 +9,27 @@ namespace ManagementCabin.Controllers
     [ApiController]
     public class CabinController : ControllerBase
     {
-        static List<Cabin> CabinList = new List<Cabin>();
+        private readonly IDataContext _context;
+
+        public CabinController(IDataContext context)
+        {
+            _context = context;
+        }
+
+
+
         // GET: api/<CabinController>
         [HttpGet]
         public IEnumerable< Cabin> Get()
         {
       
-            return CabinList;
+            return _context.Cabins;
         }
 
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
-            var order = CabinList.Find(x => x.Id == id);
+            var order = _context.Cabins.Find(x => x.Id == id);
             if (order == null)
                 return NotFound();
             return Ok(order);
@@ -31,21 +39,21 @@ namespace ManagementCabin.Controllers
         [HttpPost]
         public void Post([FromBody] Cabin newCabin)
         {
-            CabinList.Add(newCabin);
+            _context.Cabins.Add(newCabin);
         }
 
         // PUT api/<CabinController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string? name, double price)
         {
-            for (int i = 0; i < CabinList.Count; i++)
+            for (int i = 0; i < _context.Cabins.Count; i++)
             {
-                if (CabinList[i].Id == id)
+                if (_context.Cabins[i].Id == id)
                 {
                     if (name!=null)
                     {
-                        CabinList[i].Name = name;
-                        CabinList[i].Price = price;
+                        _context.Cabins[i].Name = name;
+                        _context.Cabins[i].Price = price;
                     }                    
                 }
             }
@@ -55,11 +63,11 @@ namespace ManagementCabin.Controllers
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            for (int i = 0; i < CabinList.Count; i++)
+            for (int i = 0; i < _context.Cabins.Count; i++)
             {
-                if (CabinList[i].Id == id)
+                if (_context.Cabins[i].Id == id)
                 {
-                    CabinList.RemoveAt(i);
+                    _context.Cabins.RemoveAt(i);
                 }
             }
         }

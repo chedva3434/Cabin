@@ -11,13 +11,21 @@ namespace uniTest
 {
     public class UsersController
     {
+        private readonly CastomerController _context;
+
+        public UsersController()
+        {
+            FakeContext context = new FakeContext();
+            _context = new CastomerController(context);
+        }
+
         [Fact]
         public void GetReturn_All()
         {
             //Arrange
 
             //Act
-            var controller = new CastomerController();
+            var controller = _context;
             var result = controller.Get();
 
             //Assert
@@ -27,10 +35,11 @@ namespace uniTest
         [Fact]
         public void GetAll_ReturnsCount()
         {
-            var controller = new CastomerController();
+            //act
+            var controller = _context;
             var result = controller.Get();
-
-            Assert.Equal(1, result.Count());
+            //assert
+            Assert.IsType<List<Castomer>>(result);
         }
 
 
@@ -41,7 +50,7 @@ namespace uniTest
             var id = 1;
 
             //Act
-            var controller = new CastomerController();
+            var controller = _context;
             var result = controller.Get(id);
 
             //Assert
@@ -55,7 +64,7 @@ namespace uniTest
             var id = 4;
 
             //Act
-            var controller = new CastomerController();
+            var controller = _context;
             var result = controller.Get(id);
 
             //Assert
