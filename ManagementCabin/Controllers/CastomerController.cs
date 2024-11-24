@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Clean.Core.Models;
+using Clean.Core.Service;
+using Clean.Service;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,66 +11,46 @@ namespace ManagementCabin.Controllers
     [ApiController]
     public class CastomerController : ControllerBase
     {
-        private readonly IDataContext _context;
+        private readonly ICastomerService _castomerService;
 
-        public CastomerController(IDataContext context)
+        public CastomerController(ICastomerService castomerService)
         {
-            _context = context;
+            _castomerService = castomerService;
         }
-
 
         // GET: api/<CastomerController>
         [HttpGet]
         public IEnumerable<Castomer> Get()
         {
-           return _context.Castomers;
+           return _castomerService.GetAll();
         }
 
-        // GET api/<CastomerController>/5
+        //// GET api/<CastomerController>/5
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public Castomer Get(int id)
         {
-            var order = _context.Castomers.Find(x => x.id == id);
-            if (order == null)
-                return NotFound();
-            return Ok(order);
+            return _castomerService.GetById(id);
         }
-
 
         // POST api/<CastomerController>
         [HttpPost]
         public void Post([FromBody] Castomer newCastomer)
         {
-            _context.Castomers.Add(newCastomer);
+            _castomerService.PostValu(newCastomer);
         }
 
         // PUT api/<CastomerController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string name,string phone)
+        public void Put(int id, [FromBody] string name, string phone)
         {
-            for (int i = 0; i < _context.Castomers.Count; i++)
-            {
-                if (_context.Castomers[i].id == id)
-                {
-                    _context.Castomers[i].name = name;
-                    _context.Castomers[i].phone = phone;
-                }
-            }
+            _castomerService.PutById(id, name, phone);
         }
 
         // DELETE api/<CastomerController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            for (int i = 0; i < _context.Castomers.Count; i++)
-            {
-                if (_context.Castomers[i].id == id)
-                {
-                    _context.Castomers.RemoveAt(i);
-                    return;
-                }
-
-            }
+           _castomerService.DeleteById(id);
         }
     }
 }

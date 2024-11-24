@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Clean.Core.Models;
+using Clean.Core.Service;
+using Clean.Service;
+using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,62 +11,46 @@ namespace ManagementCabin.Controllers
     [ApiController]
     public class OrdersController : ControllerBase
     {
-        private readonly IDataContext _context;
+        private readonly IOrderService _orderService;
 
-        public OrdersController(IDataContext context)
+        public OrdersController(IOrderService orderService)
         {
-            _context = context;
+            _orderService = orderService;
         }
-
 
         // GET: api/<OrdersController>
         [HttpGet]
         public IEnumerable<Order> Get()
         {
-            return _context.Orders;
+            return _orderService.GetAll();
         }
 
         // GET api/<OrdersController>/5
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public Order Get(int id)
         {
-            var order= _context.Orders.Find(x => x.Id == id);
-            if (order == null)
-                return NotFound();
-            return Ok(order);
+            return _orderService.GetById(id);
         }
 
         // POST api/<OrdersController>
         [HttpPost]
         public void Post([FromBody] Order newOrder)
         {
-            _context.Orders.Add(newOrder);
+            _orderService.PostValu(newOrder);
         }
 
         // PUT api/<OrdersController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] DateTime d)
         {
-            for (int i = 0; i < _context.Orders.Count; i++)
-            {
-                if (_context.Orders[i].Id == id)
-                {
-                    _context.Orders[i].dateOfOrder=d;
-                }
-            }
+            _orderService.PutById(id, d);
         }
 
         // DELETE api/<OrdersController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            for(int i = 0;i < _context.Orders.Count;i++)
-            {
-                if (_context.Orders[i].Id == id)
-                {
-                    _context.Orders.RemoveAt(i);
-                }
-            }
+            _orderService.DeleteById(id);
         }
     }
 }

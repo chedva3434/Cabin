@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Clean.Data/1.0.0": {
+        "dependencies": {
+          "Clean.Core": "1.0.0"
+        },
+        "runtime": {
+          "Clean.Data.dll": {}
+        }
+      },
+      "Clean.Core/1.0.0": {
+        "runtime": {
+          "Clean.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Clean.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Clean.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

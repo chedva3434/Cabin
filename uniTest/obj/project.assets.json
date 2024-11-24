@@ -1798,10 +1798,48 @@
           "build/netcoreapp3.1/xunit.runner.visualstudio.props": {}
         }
       },
+      "Clean.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Clean.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Clean.Core.dll": {}
+        }
+      },
+      "Clean.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Clean.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Clean.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Clean.Data.dll": {}
+        }
+      },
+      "Clean.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Clean.Core": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Clean.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Clean.Service.dll": {}
+        }
+      },
       "ManagementCabin/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Clean.Data": "1.0.0",
+          "Clean.Service": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "compile": {
@@ -5733,6 +5771,21 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
+    "Clean.Core/1.0.0": {
+      "type": "project",
+      "path": "../Creat.Core/Clean.Core.csproj",
+      "msbuildProject": "../Creat.Core/Clean.Core.csproj"
+    },
+    "Clean.Data/1.0.0": {
+      "type": "project",
+      "path": "../Clean.Data/Clean.Data.csproj",
+      "msbuildProject": "../Clean.Data/Clean.Data.csproj"
+    },
+    "Clean.Service/1.0.0": {
+      "type": "project",
+      "path": "../Clean.Service/Clean.Service.csproj",
+      "msbuildProject": "../Clean.Service/Clean.Service.csproj"
+    },
     "ManagementCabin/1.0.0": {
       "type": "project",
       "path": "../ManagementCabin/ManagementCabin.csproj",
@@ -5741,6 +5794,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Clean.Core >= 1.0.0",
       "ManagementCabin >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
       "coverlet.collector >= 3.2.0",
@@ -5775,6 +5829,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Creat.Core\\Clean.Core.csproj": {
+              "projectPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Creat.Core\\Clean.Core.csproj"
+            },
             "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\ManagementCabin\\ManagementCabin.csproj": {
               "projectPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\ManagementCabin\\ManagementCabin.csproj"
             }

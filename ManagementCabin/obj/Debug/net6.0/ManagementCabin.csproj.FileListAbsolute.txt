@@ -9,6 +9,12 @@ C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\ManagementCabin\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\ManagementCabin\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\ManagementCabin\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\ManagementCabin\bin\Debug\net6.0\Clean.Core.dll
+C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\ManagementCabin\bin\Debug\net6.0\Clean.Data.dll
+C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\ManagementCabin\bin\Debug\net6.0\Clean.Service.dll
+C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\ManagementCabin\bin\Debug\net6.0\Clean.Data.pdb
+C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\ManagementCabin\bin\Debug\net6.0\Clean.Service.pdb
+C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\ManagementCabin\bin\Debug\net6.0\Clean.Core.pdb
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\ManagementCabin\obj\Debug\net6.0\ManagementCabin.csproj.AssemblyReference.cache
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\ManagementCabin\obj\Debug\net6.0\ManagementCabin.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\ManagementCabin\obj\Debug\net6.0\ManagementCabin.AssemblyInfoInputs.cache

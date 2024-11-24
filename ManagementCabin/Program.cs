@@ -1,6 +1,10 @@
+using Clean.Core.Repositores;
+using Clean.Core.Service;
+using Clean.Data;
+using Clean.Data.Repositores;
+using Clean.Service;
 using ManagementCabin;
 using Microsoft.Extensions.DependencyInjection;
-using uniTest;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,7 +14,18 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<IDataContext, DataContext>();
+
+builder.Services.AddScoped<ICabinService,CabinService>();
+builder.Services.AddScoped<ICabinRepositores, CabinRepositores>();
+
+builder.Services.AddScoped<ICastomerService,CastomerService>();
+builder.Services.AddScoped<ICastomerRepositores, CastomerRepositores>();
+
+builder.Services.AddScoped<IOrderService,OrderService>();
+builder.Services.AddScoped<IOrderRepositores,OrderRepositores>();
+
+builder.Services.AddSingleton<DataContext>();
+
 
 var app = builder.Build();
 

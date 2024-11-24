@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Creat.Core\Clean.Core.csproj" />
     <ProjectReference Include="..\ManagementCabin\ManagementCabin.csproj" />
   </ItemGroup>
 
