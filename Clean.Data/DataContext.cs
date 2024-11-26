@@ -1,4 +1,5 @@
 ﻿using Clean.Core.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,17 +8,15 @@ using System.Threading.Tasks;
 
 namespace Clean.Data
 {
-    public class DataContext
+    public class DataContext: DbContext
     {
-        public List<Cabin> Cabins { get; set; }
-        public List<Castomer> castomers { get; set; }
-        public List<Order> orders { get; set; }
+        public DbSet<Cabin> Cabins { get; set; }
+        public DbSet<Castomer> castomers { get; set; }
+        public DbSet<Order> orders { get; set; }
 
-        public DataContext()
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            Cabins = new List<Cabin> { new Cabin { Id = 1, Name = "fg", Price = 500, status = false } };
-            castomers = new List<Castomer> { new Castomer { id = 1 } };
-            orders = new List<Order> { new Order { Id=1 } };
+            optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=sample_db");
         }
     }
 }

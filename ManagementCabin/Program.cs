@@ -24,7 +24,8 @@ builder.Services.AddScoped<ICastomerRepositores, CastomerRepositores>();
 builder.Services.AddScoped<IOrderService,OrderService>();
 builder.Services.AddScoped<IOrderRepositores,OrderRepositores>();
 
-builder.Services.AddSingleton<DataContext>();
+builder.Services.AddDbContext<DataContext>();
+//builder.Services.AddSingleton<DataContext>();
 
 
 var app = builder.Build();
