@@ -37,21 +37,21 @@ namespace ManagementCabin.Controllers
         [HttpPost]
         public void Post([FromBody] Cabin newCabin)
         {
-            _cabinService.PostValu(newCabin);
+            _cabinService.AddValue(newCabin);
         }
 
         // PUT api/<CabinController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string? name, double price)
         {
-           _cabinService.PutById(id, name, price);
+           _cabinService.PutValue(id, name, price);
         }
 
         // DELETE api/<CabinController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-           _cabinService.DeleteById(id);
+           _cabinService.Delete(id);
         }
     }
 }

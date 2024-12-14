@@ -11,8 +11,8 @@ namespace Clean.Core.Service
     {
         List<Cabin> GetAll();
         Cabin GetById(int id);
-        void PostValu(Cabin newCastomer);
-        void PutById(int id, string name, double price);
-        void DeleteById(int id);
+        void AddValue(Cabin newCastomer);
+        void PutValue(int id, string name, double price);
+        void Delete(int id);
     }
 }

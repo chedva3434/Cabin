@@ -23,6 +23,8 @@ builder.Services.AddScoped<ICastomerRepositores, CastomerRepositores>();
 
 builder.Services.AddScoped<IOrderService,OrderService>();
 builder.Services.AddScoped<IOrderRepositores,OrderRepositores>();
+builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
+
 
 builder.Services.AddDbContext<DataContext>();
 //builder.Services.AddSingleton<DataContext>();

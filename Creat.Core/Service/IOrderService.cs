@@ -11,8 +11,8 @@ namespace Clean.Core.Service
     {
         List<Order> GetAll();
         Order GetById(int id);
-        void PostValu(Order newCastomer);
-        void PutById(int id,DateTime d);
-        void DeleteById(int id);
+        void AddValue(Order newCastomer);
+        void PutValue(int id,DateTime d);
+        void Delete(int id);
     }
 }

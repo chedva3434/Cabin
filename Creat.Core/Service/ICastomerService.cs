@@ -11,8 +11,8 @@ namespace Clean.Core.Service
     {
         List<Castomer> GetAll();
         Castomer GetById(int id);
-        void PostValu(Castomer newCastomer);
-        void PutById(int id, string name, string phone);
-        void DeleteById(int id);
+        void AddValue(Castomer newCastomer);
+        void PutValue(int id, string name, string phone);
+        void Delete(int id);
     }
 }

@@ -11,36 +11,39 @@ namespace Clean.Service
 {
     public class CabinService:ICabinService
     {
-        private readonly ICabinRepositores _cabinRepositores;
+        private readonly IRepositoryManager _cabinRepositores;
 
-        public CabinService(ICabinRepositores cabinRepositores)
+        public CabinService(IRepositoryManager cabinRepositores)
         {
             _cabinRepositores = cabinRepositores;
         }
 
         public List<Cabin> GetAll()
         {
-            return _cabinRepositores.GetList();
+            return _cabinRepositores.Cabin.GetList();
         }
 
         public Cabin GetById(int id)
         {
-            return _cabinRepositores.GetId(id);
+            return _cabinRepositores.Cabin.GetId(id);
         }
 
-        public void PostValu(Cabin newCastomer)
+        public void AddValue(Cabin newCastomer)
         {
-            _cabinRepositores.Post(newCastomer);
+            _cabinRepositores.Cabin.Post(newCastomer);
+            _cabinRepositores.Save();
         }
 
-        public void PutById(int id, string name, double price)
+        public void PutValue(int id, string name, double price)
         {
-            _cabinRepositores.Put(id, name, price);
+            _cabinRepositores.Cabin.Put(id, name, price);
+            _cabinRepositores.Save();
         }
 
-        public void DeleteById(int id)
+        public void Delete(int id)
         {
-            _cabinRepositores.Delete(id);
+            _cabinRepositores.Cabin.Delete(id);
+            _cabinRepositores.Save();
         }
     }
 }

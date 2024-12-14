@@ -36,21 +36,21 @@ namespace ManagementCabin.Controllers
         [HttpPost]
         public void Post([FromBody] Order newOrder)
         {
-            _orderService.PostValu(newOrder);
+            _orderService.AddValue(newOrder);
         }
 
         // PUT api/<OrdersController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] DateTime d)
         {
-            _orderService.PutById(id, d);
+            _orderService.PutValue(id, d);
         }
 
         // DELETE api/<OrdersController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            _orderService.DeleteById(id);
+            _orderService.Delete(id);
         }
     }
 }

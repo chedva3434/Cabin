@@ -36,21 +36,21 @@ namespace ManagementCabin.Controllers
         [HttpPost]
         public void Post([FromBody] Castomer newCastomer)
         {
-            _castomerService.PostValu(newCastomer);
+            _castomerService.AddValue(newCastomer);
         }
 
         // PUT api/<CastomerController>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string name, string phone)
         {
-            _castomerService.PutById(id, name, phone);
+            _castomerService.PutValue(id, name, phone);
         }
 
         // DELETE api/<CastomerController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-           _castomerService.DeleteById(id);
+           _castomerService.Delete(id);
         }
     }
 }

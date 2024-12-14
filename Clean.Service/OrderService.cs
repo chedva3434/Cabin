@@ -11,36 +11,39 @@ namespace Clean.Service
 {
     public class OrderService: IOrderService
     {
-        private readonly IOrderRepositores _orderRepositores;
+        private readonly IRepositoryManager _orderRepositores;
 
-        public OrderService(IOrderRepositores orderRepositores)
+        public OrderService(IRepositoryManager orderRepositores)
         {
             _orderRepositores = orderRepositores;
         }
 
         public List<Order> GetAll()
         {
-            return _orderRepositores.GetList();
+            return _orderRepositores.Order.GetList();
         }
 
         public Order GetById(int id)
         {
-            return _orderRepositores.GetId(id);
+            return _orderRepositores.Order.GetId(id);
         }
 
-        public void PostValu(Order newCastomer)
+        public void AddValue(Order newCastomer)
         {
-            _orderRepositores.Post(newCastomer);
+            _orderRepositores.Order.Post(newCastomer);
+            _orderRepositores.Save();
         }
 
-        public void PutById(int id,DateTime d)
+        public void PutValue(int id,DateTime d)
         {
-            _orderRepositores.Put(id,d);
+            _orderRepositores.Order.Put(id,d);
+            _orderRepositores.Save();
         }
 
-        public void DeleteById(int id)
+        public void Delete(int id)
         {
-            _orderRepositores.Delete(id);
+            _orderRepositores.Order.Delete(id);
+            _orderRepositores.Save();
         }
     }
 }

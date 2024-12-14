@@ -1,4 +1,5 @@
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\bin\Debug\net6.0\Clean.Data.deps.json
+C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\bin\Debug\net6.0\Clean.Data.runtimeconfig.json
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\bin\Debug\net6.0\Clean.Data.dll
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\bin\Debug\net6.0\Clean.Data.pdb
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\bin\Debug\net6.0\Clean.Core.dll
@@ -12,6 +13,5 @@ C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\Clean.Data.dll
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\refint\Clean.Data.dll
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\Clean.Data.pdb
-C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\ref\Clean.Data.dll
-C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\bin\Debug\net6.0\Clean.Data.runtimeconfig.json
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\Clean.Data.genruntimeconfig.cache
+C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\ref\Clean.Data.dll
