@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Creat.Core\Clean.Core.csproj" />
+    <ProjectReference Include="..\Creat.Core\ManagementCabin.Core.csproj" />
   </ItemGroup>
 
 </Project>

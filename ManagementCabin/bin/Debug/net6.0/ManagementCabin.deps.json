@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "ManagementCabin/1.0.0": {
         "dependencies": {
-          "Clean.Data": "1.0.0",
-          "Clean.Service": "1.0.0",
+          "ManagementCabin.Data": "1.0.0",
+          "ManagementCabin.Service": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "6.0.36",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
@@ -534,26 +534,26 @@
           }
         }
       },
-      "Clean.Core/1.0.0": {
+      "ManagementCabin.Core/1.0.0": {
         "runtime": {
-          "Clean.Core.dll": {}
+          "ManagementCabin.Core.dll": {}
         }
       },
-      "Clean.Data/1.0.0": {
+      "ManagementCabin.Data/1.0.0": {
         "dependencies": {
-          "Clean.Core": "1.0.0",
+          "ManagementCabin.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.36"
         },
         "runtime": {
-          "Clean.Data.dll": {}
+          "ManagementCabin.Data.dll": {}
         }
       },
-      "Clean.Service/1.0.0": {
+      "ManagementCabin.Service/1.0.0": {
         "dependencies": {
-          "Clean.Core": "1.0.0"
+          "ManagementCabin.Core": "1.0.0"
         },
         "runtime": {
-          "Clean.Service.dll": {}
+          "ManagementCabin.Service.dll": {}
         }
       }
     }
@@ -900,17 +900,17 @@
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
-    "Clean.Core/1.0.0": {
+    "ManagementCabin.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Clean.Data/1.0.0": {
+    "ManagementCabin.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Clean.Service/1.0.0": {
+    "ManagementCabin.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

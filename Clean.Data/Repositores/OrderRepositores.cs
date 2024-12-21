@@ -1,5 +1,6 @@
 ﻿using Clean.Core.Models;
 using Clean.Core.Repositores;
+using ManagementCabin.Data.Repositores;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,51 +9,50 @@ using System.Threading.Tasks;
 
 namespace Clean.Data.Repositores
 {
-    public class OrderRepositores : IOrderRepositores
+    public class OrderRepositores : Repository<Castomer>, IOrderRepositores
     {
-        private readonly DataContext _context;
 
-        public OrderRepositores(DataContext context)
-        {
-            _context = context;
-        }
+        public OrderRepositores(DataContext context):base(context) { }
 
-        public List<Order> GetList()
-        {
-            return _context.orders.ToList();
-        }
+        #region No
+        //private readonly DataContext _context;
+        //public List<Order> GetList()
+        //{
+        //    return _context.orders.ToList();
+        //}
 
-        public Order GetId(int id)
-        {
-            var order = _context.orders.ToList().Find(x => x.Id == id);
-            return order;
-        }
+        //public Order GetId(int id)
+        //{
+        //    var order = _context.orders.ToList().Find(x => x.Id == id);
+        //    return order;
+        //}
 
-        public void Post(Order newOrder)
-        {
-            _context.orders.Add(newOrder);
-        }
+        //public void Post(Order newOrder)
+        //{
+        //    _context.orders.Add(newOrder);
+        //}
 
-        public void Put(int id, DateTime d)
-        {
-            for (int i = 0; i < _context.orders.ToList().Count; i++)
-            {
-                if (_context.orders.ToList()[i].Id == id)
-                {
-                   _context.orders.ToList()[i].dateOfOrder = d;
-                }
-            }
-        }
+        //public void Put(int id, DateTime d)
+        //{
+        //    for (int i = 0; i < _context.orders.ToList().Count; i++)
+        //    {
+        //        if (_context.orders.ToList()[i].Id == id)
+        //        {
+        //           _context.orders.ToList()[i].dateOfOrder = d;
+        //        }
+        //    }
+        //}
 
-        public void Delete(int id)
-        {
-            for (int i = 0; i < _context.orders.ToList().Count; i++)
-            {
-                if (_context.orders.ToList()[i].Id == id)
-                {
-                    _context.orders.ToList().RemoveAt(i);
-                }
-            }
-        }
+        //public void Delete(int id)
+        //{
+        //    for (int i = 0; i < _context.orders.ToList().Count; i++)
+        //    {
+        //        if (_context.orders.ToList()[i].Id == id)
+        //        {
+        //            _context.orders.ToList().RemoveAt(i);
+        //        }
+        //    }
+        //}
+        #endregion
     }
 }

@@ -2,8 +2,10 @@ using Clean.Core.Repositores;
 using Clean.Core.Service;
 using Clean.Data;
 using Clean.Data.Repositores;
-using Clean.Service;
 using ManagementCabin;
+using ManagementCabin.Core.Repositores;
+using ManagementCabin.Data.Repositores;
+using ManagementCabin.Service;
 using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +26,7 @@ builder.Services.AddScoped<ICastomerRepositores, CastomerRepositores>();
 builder.Services.AddScoped<IOrderService,OrderService>();
 builder.Services.AddScoped<IOrderRepositores,OrderRepositores>();
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
 
 builder.Services.AddDbContext<DataContext>();

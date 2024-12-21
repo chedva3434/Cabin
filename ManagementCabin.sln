@@ -5,11 +5,11 @@ VisualStudioVersion = 17.6.33815.320
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagementCabin", "ManagementCabin\ManagementCabin.csproj", "{03AF736A-6C69-4177-8BEC-6378B16A2BC9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clean.Core", "Creat.Core\Clean.Core.csproj", "{25DE5335-12AD-4CA5-A723-F623A96040A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagementCabin.Core", "Creat.Core\ManagementCabin.Core.csproj", "{25DE5335-12AD-4CA5-A723-F623A96040A8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clean.Data", "Clean.Data\Clean.Data.csproj", "{2B3E4891-29AC-40BA-95C8-E6AE65C17A15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagementCabin.Data", "Clean.Data\ManagementCabin.Data.csproj", "{2B3E4891-29AC-40BA-95C8-E6AE65C17A15}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clean.Service", "Clean.Service\Clean.Service.csproj", "{B14F8ABE-4C27-434B-B1DE-C8BBCB80C380}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManagementCabin.Service", "Clean.Service\ManagementCabin.Service.csproj", "{B14F8ABE-4C27-434B-B1DE-C8BBCB80C380}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

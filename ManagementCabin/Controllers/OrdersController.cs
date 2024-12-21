@@ -1,6 +1,5 @@
 ﻿using Clean.Core.Models;
 using Clean.Core.Service;
-using Clean.Service;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -41,16 +40,16 @@ namespace ManagementCabin.Controllers
 
         // PUT api/<OrdersController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] DateTime d)
+        public void Put( [FromBody] Order value)
         {
-            _orderService.PutValue(id, d);
+            _orderService.PutValue(value);
         }
 
         // DELETE api/<OrdersController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(Order order)
         {
-            _orderService.Delete(id);
+            _orderService.Delete(order);
         }
     }
 }

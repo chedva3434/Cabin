@@ -9,10 +9,10 @@ namespace Clean.Core.Service
 {
     public interface IOrderService
     {
-        List<Order> GetAll();
+        IEnumerable<Order> GetAll();
         Order GetById(int id);
         void AddValue(Order newCastomer);
-        void PutValue(int id,DateTime d);
-        void Delete(int id);
+        void PutValue(Order order);
+        void Delete(Order order);
     }
 }

@@ -15,8 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Clean.Data\Clean.Data.csproj" />
-    <ProjectReference Include="..\Clean.Service\Clean.Service.csproj" />
+    <ProjectReference Include="..\Clean.Data\ManagementCabin.Data.csproj" />
+    <ProjectReference Include="..\Clean.Service\ManagementCabin.Service.csproj" />
   </ItemGroup>
 
 </Project>

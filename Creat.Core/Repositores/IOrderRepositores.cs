@@ -9,10 +9,10 @@ namespace Clean.Core.Repositores
 {
     public interface IOrderRepositores
     {
-        List<Order> GetList();
-        Order GetId(int id);
-        void Post(Order newCastomer);
-        void Put(int id,DateTime d);
-        void Delete(int id);
+        //List<Order> GetList();
+        //Order GetId(int id);
+        //void Post(Order newCastomer);
+        //void Put(int id,DateTime d);
+        //void Delete(int id);
     }
 }

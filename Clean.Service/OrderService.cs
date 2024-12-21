@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clean.Service
+namespace ManagementCabin.Service
 {
     public class OrderService: IOrderService
     {
@@ -18,31 +18,31 @@ namespace Clean.Service
             _orderRepositores = orderRepositores;
         }
 
-        public List<Order> GetAll()
+        public IEnumerable<Order> GetAll()
         {
-            return _orderRepositores.Order.GetList();
+            return _orderRepositores.Orders.GetAll();
         }
 
         public Order GetById(int id)
         {
-            return _orderRepositores.Order.GetId(id);
+            return _orderRepositores.Orders.GetById(id);
         }
 
         public void AddValue(Order newCastomer)
         {
-            _orderRepositores.Order.Post(newCastomer);
+            _orderRepositores.Orders.Add(newCastomer);
             _orderRepositores.Save();
         }
 
-        public void PutValue(int id,DateTime d)
+        public void PutValue(Order order)
         {
-            _orderRepositores.Order.Put(id,d);
+            _orderRepositores.Orders.Update(order);
             _orderRepositores.Save();
         }
 
-        public void Delete(int id)
+        public void Delete(Order order)
         {
-            _orderRepositores.Order.Delete(id);
+            _orderRepositores.Orders.Delete(order);
             _orderRepositores.Save();
         }
     }

@@ -9,10 +9,10 @@ namespace Clean.Core.Service
 {
     public interface ICabinService
     {
-        List<Cabin> GetAll();
+        IEnumerable<Cabin> GetAll();
         Cabin GetById(int id);
         void AddValue(Cabin newCastomer);
-        void PutValue(int id, string name, double price);
-        void Delete(int id);
+        void PutValue(Cabin cabin);
+        void Delete(Cabin cabin);
     }
 }

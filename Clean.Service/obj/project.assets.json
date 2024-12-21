@@ -2,28 +2,28 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Clean.Core/1.0.0": {
+      "ManagementCabin.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/Clean.Core.dll": {}
+          "bin/placeholder/ManagementCabin.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Clean.Core.dll": {}
+          "bin/placeholder/ManagementCabin.Core.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Clean.Core/1.0.0": {
+    "ManagementCabin.Core/1.0.0": {
       "type": "project",
-      "path": "../Creat.Core/Clean.Core.csproj",
-      "msbuildProject": "../Creat.Core/Clean.Core.csproj"
+      "path": "../Creat.Core/ManagementCabin.Core.csproj",
+      "msbuildProject": "../Creat.Core/ManagementCabin.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Clean.Core >= 1.0.0"
+      "ManagementCabin.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -32,9 +32,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Service\\Clean.Service.csproj",
-      "projectName": "Clean.Service",
-      "projectPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Service\\Clean.Service.csproj",
+      "projectUniqueName": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Service\\ManagementCabin.Service.csproj",
+      "projectName": "ManagementCabin.Service",
+      "projectPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Service\\ManagementCabin.Service.csproj",
       "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Service\\obj\\",
       "projectStyle": "PackageReference",
@@ -53,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Creat.Core\\Clean.Core.csproj": {
-              "projectPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Creat.Core\\Clean.Core.csproj"
+            "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Creat.Core\\ManagementCabin.Core.csproj": {
+              "projectPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Creat.Core\\ManagementCabin.Core.csproj"
             }
           }
         }

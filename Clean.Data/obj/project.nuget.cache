@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "C2tPmLH9BZ7po0PkxQ/f7zX2xQa4ab8P4+Om1hINEd3UUE80SykoWjEIbrlwKIF/iaQb1uFIEpiz8k8wb3vLTA==",
+  "dgSpecHash": "89JGlg2T7g1FPQQnsrIQOZj1tzhRTrvcZiCJ3lQEtmsjV1ptrkR3gvMZPlVHx2kXAO8iPbHoSlOPS7xmt8rmEA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Data\\Clean.Data.csproj",
+  "projectFilePath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Data\\ManagementCabin.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user1\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\user1\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

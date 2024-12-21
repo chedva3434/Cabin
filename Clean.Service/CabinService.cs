@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clean.Service
+namespace ManagementCabin.Service
 {
     public class CabinService:ICabinService
     {
@@ -18,31 +18,31 @@ namespace Clean.Service
             _cabinRepositores = cabinRepositores;
         }
 
-        public List<Cabin> GetAll()
+        public IEnumerable<Cabin> GetAll()
         {
-            return _cabinRepositores.Cabin.GetList();
+            return _cabinRepositores.Cabins.GetAll();
         }
 
         public Cabin GetById(int id)
         {
-            return _cabinRepositores.Cabin.GetId(id);
+            return _cabinRepositores.Cabins.GetById(id);
         }
 
         public void AddValue(Cabin newCastomer)
         {
-            _cabinRepositores.Cabin.Post(newCastomer);
+            _cabinRepositores.Cabins.Add(newCastomer);
             _cabinRepositores.Save();
         }
 
-        public void PutValue(int id, string name, double price)
+        public void PutValue(Cabin cabin)
         {
-            _cabinRepositores.Cabin.Put(id, name, price);
+            _cabinRepositores.Cabins.Update(cabin);
             _cabinRepositores.Save();
         }
 
-        public void Delete(int id)
+        public void Delete(Cabin cabin)
         {
-            _cabinRepositores.Cabin.Delete(id);
+            _cabinRepositores.Cabins.Delete(cabin);
             _cabinRepositores.Save();
         }
     }

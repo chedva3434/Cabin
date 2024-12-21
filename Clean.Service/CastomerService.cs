@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clean.Service
+namespace ManagementCabin.Service
 {
     public class CastomerService: ICastomerService
     {
@@ -18,31 +18,31 @@ namespace Clean.Service
             _castomerRepositores = castomerRepositores;
         }
 
-        public List<Castomer> GetAll()
+        public IEnumerable<Castomer> GetAll()
         {
-            return _castomerRepositores.Castomer.GetList();
+            return _castomerRepositores.Castomers.GetAll();
         }
 
         public Castomer GetById(int id)
         {
-            return _castomerRepositores.Castomer.GetId(id);
+            return _castomerRepositores.Castomers.GetById(id);
         }
 
         public void AddValue( Castomer newCastomer)
         {
-             _castomerRepositores.Castomer.Post(newCastomer);
+             _castomerRepositores.Castomers.Add(newCastomer);
             _castomerRepositores.Save();
         }
 
-        public void PutValue(int id, string name, string phone)
+        public void PutValue(Castomer castomer)
         {
-            _castomerRepositores.Castomer.Put(id, name, phone);
+            _castomerRepositores.Castomers.Update(castomer);
             _castomerRepositores.Save();
         }
 
-        public void Delete(int id)
+        public void Delete(Castomer castomer)
         {
-            _castomerRepositores.Castomer.Delete(id);
+            _castomerRepositores.Castomers.Delete(castomer);
             _castomerRepositores.Save();
         }
     }

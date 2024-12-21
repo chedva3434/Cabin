@@ -851,41 +851,41 @@
           }
         }
       },
-      "Clean.Core/1.0.0": {
+      "ManagementCabin.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/Clean.Core.dll": {}
+          "bin/placeholder/ManagementCabin.Core.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Clean.Core.dll": {}
+          "bin/placeholder/ManagementCabin.Core.dll": {}
         }
       },
-      "Clean.Data/1.0.0": {
+      "ManagementCabin.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Clean.Core": "1.0.0",
+          "ManagementCabin.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.36"
         },
         "compile": {
-          "bin/placeholder/Clean.Data.dll": {}
+          "bin/placeholder/ManagementCabin.Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Clean.Data.dll": {}
+          "bin/placeholder/ManagementCabin.Data.dll": {}
         }
       },
-      "Clean.Service/1.0.0": {
+      "ManagementCabin.Service/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Clean.Core": "1.0.0"
+          "ManagementCabin.Core": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Clean.Service.dll": {}
+          "bin/placeholder/ManagementCabin.Service.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Clean.Service.dll": {}
+          "bin/placeholder/ManagementCabin.Service.dll": {}
         }
       }
     }
@@ -2245,26 +2245,26 @@
         "version.txt"
       ]
     },
-    "Clean.Core/1.0.0": {
+    "ManagementCabin.Core/1.0.0": {
       "type": "project",
-      "path": "../Creat.Core/Clean.Core.csproj",
-      "msbuildProject": "../Creat.Core/Clean.Core.csproj"
+      "path": "../Creat.Core/ManagementCabin.Core.csproj",
+      "msbuildProject": "../Creat.Core/ManagementCabin.Core.csproj"
     },
-    "Clean.Data/1.0.0": {
+    "ManagementCabin.Data/1.0.0": {
       "type": "project",
-      "path": "../Clean.Data/Clean.Data.csproj",
-      "msbuildProject": "../Clean.Data/Clean.Data.csproj"
+      "path": "../Clean.Data/ManagementCabin.Data.csproj",
+      "msbuildProject": "../Clean.Data/ManagementCabin.Data.csproj"
     },
-    "Clean.Service/1.0.0": {
+    "ManagementCabin.Service/1.0.0": {
       "type": "project",
-      "path": "../Clean.Service/Clean.Service.csproj",
-      "msbuildProject": "../Clean.Service/Clean.Service.csproj"
+      "path": "../Clean.Service/ManagementCabin.Service.csproj",
+      "msbuildProject": "../Clean.Service/ManagementCabin.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Clean.Data >= 1.0.0",
-      "Clean.Service >= 1.0.0",
+      "ManagementCabin.Data >= 1.0.0",
+      "ManagementCabin.Service >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.36",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -2297,11 +2297,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Data\\Clean.Data.csproj": {
-              "projectPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Data\\Clean.Data.csproj"
+            "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Data\\ManagementCabin.Data.csproj": {
+              "projectPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Data\\ManagementCabin.Data.csproj"
             },
-            "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Service\\Clean.Service.csproj": {
-              "projectPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Service\\Clean.Service.csproj"
+            "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Service\\ManagementCabin.Service.csproj": {
+              "projectPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Service\\ManagementCabin.Service.csproj"
             }
           }
         }

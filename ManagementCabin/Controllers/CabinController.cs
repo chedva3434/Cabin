@@ -1,6 +1,5 @@
 ﻿using Clean.Core.Models;
 using Clean.Core.Service;
-using Clean.Service;
 using Microsoft.AspNetCore.Mvc;
 using System.Xml.Linq;
 
@@ -35,23 +34,23 @@ namespace ManagementCabin.Controllers
 
         // POST api/<CabinController>
         [HttpPost]
-        public void Post([FromBody] Cabin newCabin)
+        public void Post([FromBody] Cabin value)
         {
-            _cabinService.AddValue(newCabin);
+            _cabinService.AddValue(value);
         }
 
         // PUT api/<CabinController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string? name, double price)
+        public void Put( [FromBody] Cabin value)
         {
-           _cabinService.PutValue(id, name, price);
+           _cabinService.PutValue(value);
         }
 
         // DELETE api/<CabinController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(Cabin cabin)
         {
-           _cabinService.Delete(id);
+           _cabinService.Delete(cabin);
         }
     }
 }

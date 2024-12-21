@@ -1,6 +1,5 @@
 ﻿using Clean.Core.Models;
 using Clean.Core.Service;
-using Clean.Service;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -34,23 +33,23 @@ namespace ManagementCabin.Controllers
 
         // POST api/<CastomerController>
         [HttpPost]
-        public void Post([FromBody] Castomer newCastomer)
+        public void Post([FromBody] Castomer value)
         {
-            _castomerService.AddValue(newCastomer);
+            _castomerService.AddValue(value);
         }
 
         // PUT api/<CastomerController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string name, string phone)
+        public void Put([FromBody] Castomer value)
         {
-            _castomerService.PutValue(id, name, phone);
+            _castomerService.PutValue(value);
         }
 
         // DELETE api/<CastomerController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public void Delete(Castomer castomer)
         {
-           _castomerService.Delete(id);
+           _castomerService.Delete(castomer);
         }
     }
 }

@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Creat.Core\\Clean.Core.csproj",
-      "projectName": "Clean.Core",
-      "projectPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Creat.Core\\Clean.Core.csproj",
+      "projectUniqueName": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Creat.Core\\ManagementCabin.Core.csproj",
+      "projectName": "ManagementCabin.Core",
+      "projectPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Creat.Core\\ManagementCabin.Core.csproj",
       "packagesPath": "C:\\Users\\user1\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Creat.Core\\obj\\",
       "projectStyle": "PackageReference",

@@ -9,10 +9,10 @@ namespace Clean.Core.Repositores
 {
     public interface ICastomerRepositores
     {
-        List<Castomer> GetList();
-        Castomer GetId(int id);
-        void Post(Castomer newCastomer);
-        void Put(int id, string name, string phone);
-        void Delete(int id);
+        //List<Castomer> GetList();
+        //Castomer GetId(int id);
+        //void Post(Castomer newCastomer);
+        //void Put(int id, string name, string phone);
+        //void Delete(int id);
     }
 }
