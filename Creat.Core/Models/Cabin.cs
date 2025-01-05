@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace Clean.Core.Models
         static int count;
         public double Price { get; set; }
         public bool status { get; set; }
+        public List<Order> Orders { get; set; }
 
         public Cabin(int id, string name, double price)
         {
@@ -22,7 +24,7 @@ namespace Clean.Core.Models
             status = true;
         }
 
-        public Cabin() { }
+        //public Cabin() { }
 
         public void UpDateStatus() => status = !status;
     }

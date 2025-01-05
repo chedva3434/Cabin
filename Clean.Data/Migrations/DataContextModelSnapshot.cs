@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Clean.Data.Migrations
+namespace ManagementCabin.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
     partial class DataContextModelSnapshot : ModelSnapshot
@@ -47,21 +47,26 @@ namespace Clean.Data.Migrations
 
             modelBuilder.Entity("Clean.Core.Models.Castomer", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("orderId")
+                        .HasColumnType("int");
+
                     b.Property<string>("phone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("id");
+                    b.HasKey("Id");
+
+                    b.HasIndex("orderId");
 
                     b.ToTable("castomers");
                 });
@@ -74,10 +79,7 @@ namespace Clean.Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<int>("CastomerId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("cabinId")
+                    b.Property<int>("CabinId")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("dateOfOrder")
@@ -85,20 +87,41 @@ namespace Clean.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("cabinId");
+                    b.HasIndex("CabinId");
 
                     b.ToTable("orders");
+                });
+
+            modelBuilder.Entity("Clean.Core.Models.Castomer", b =>
+                {
+                    b.HasOne("Clean.Core.Models.Order", "order")
+                        .WithMany("castomer")
+                        .HasForeignKey("orderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("order");
                 });
 
             modelBuilder.Entity("Clean.Core.Models.Order", b =>
                 {
                     b.HasOne("Clean.Core.Models.Cabin", "cabin")
-                        .WithMany()
-                        .HasForeignKey("cabinId")
+                        .WithMany("Orders")
+                        .HasForeignKey("CabinId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("cabin");
+                });
+
+            modelBuilder.Entity("Clean.Core.Models.Cabin", b =>
+                {
+                    b.Navigation("Orders");
+                });
+
+            modelBuilder.Entity("Clean.Core.Models.Order", b =>
+                {
+                    b.Navigation("castomer");
                 });
 #pragma warning restore 612, 618
         }
