@@ -18,32 +18,32 @@ namespace ManagementCabin.Service
             _castomerRepositores = castomerRepositores;
         }
 
-        public IEnumerable<Castomer> GetAll()
+        public async Task<IEnumerable<Castomer>> GetAllAsync()
         {
-            return _castomerRepositores.Castomers.GetAll();
+            return await Task.Run(()=> _castomerRepositores.Castomers.GetAll());
         }
 
-        public Castomer GetById(int id)
+        public async Task<Castomer> GetByIdAsync(int id)
         {
-            return _castomerRepositores.Castomers.GetById(id);
+            return await Task.Run(() => _castomerRepositores.Castomers.GetById(id));
         }
 
-        public void AddValue( Castomer newCastomer)
+        public async Task AddValueAsync( Castomer newCastomer)
         {
              _castomerRepositores.Castomers.Add(newCastomer);
-            _castomerRepositores.Save();
+             await _castomerRepositores.SaveAsync();
         }
 
-        public void PutValue(Castomer castomer)
+        public async Task PutValueAsync(Castomer castomer)
         {
             _castomerRepositores.Castomers.Update(castomer);
-            _castomerRepositores.Save();
+            await _castomerRepositores.SaveAsync();
         }
 
-        public void Delete(Castomer castomer)
+        public async Task DeleteAsync(Castomer castomer)
         {
             _castomerRepositores.Castomers.Delete(castomer);
-            _castomerRepositores.Save();
+            await _castomerRepositores.SaveAsync();
         }
     }
 }

@@ -11,18 +11,17 @@ namespace Clean.Core.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        static int count;
         public double Price { get; set; }
         public bool status { get; set; }
         public List<Order> Orders { get; set; }
 
-        public Cabin(int id, string name, double price)
-        {
-            Id = count++;
-            Name = name;
-            Price = price;
-            status = true;
-        }
+        //public Cabin(int id, string name, double price)
+        //{
+        //    Id = count++;
+        //    Name = name;
+        //    Price = price;
+        //    status = true;
+        //}
 
         //public Cabin() { }
 

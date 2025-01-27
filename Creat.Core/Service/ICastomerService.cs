@@ -9,10 +9,10 @@ namespace Clean.Core.Service
 {
     public interface ICastomerService
     {
-        IEnumerable<Castomer> GetAll();
-        Castomer GetById(int id);
-        void AddValue(Castomer newCastomer);
-        void PutValue(Castomer castomer);
-        void Delete(Castomer castomer);
+        Task<IEnumerable<Castomer>> GetAllAsync();
+        Task<Castomer> GetByIdAsync(int id);
+        Task AddValueAsync(Castomer newCastomer);
+        Task PutValueAsync(Castomer castomer);
+        Task DeleteAsync(Castomer castomer);
     }
 }

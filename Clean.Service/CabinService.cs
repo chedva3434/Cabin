@@ -18,32 +18,33 @@ namespace ManagementCabin.Service
             _cabinRepositores = cabinRepositores;
         }
 
-        public IEnumerable<Cabin> GetAll()
+        public async Task<IEnumerable<Cabin>> GetAllAsync()
         {
-            return _cabinRepositores.Cabins.GetAll();
+            return await Task.Run(() => _cabinRepositores.Cabins.GetAll());  
         }
 
-        public Cabin GetById(int id)
+        public async Task<Cabin> GetByIdAsync(int id)
         {
-            return _cabinRepositores.Cabins.GetById(id);
+            return await Task.Run(() => _cabinRepositores.Cabins.GetById(id));  
+
         }
 
-        public void AddValue(Cabin newCastomer)
+        public async Task AddValueAsync(Cabin newCastomer)
         {
             _cabinRepositores.Cabins.Add(newCastomer);
-            _cabinRepositores.Save();
+           await _cabinRepositores.SaveAsync();
         }
 
-        public void PutValue(Cabin cabin)
+        public async Task PutValueAsync(Cabin cabin)
         {
-            _cabinRepositores.Cabins.Update(cabin);
-            _cabinRepositores.Save();
+           _cabinRepositores.Cabins.Update(cabin);
+           await _cabinRepositores.SaveAsync();
         }
 
-        public void Delete(Cabin cabin)
+        public async Task DeleteAsync(Cabin cabin)
         {
             _cabinRepositores.Cabins.Delete(cabin);
-            _cabinRepositores.Save();
+            await _cabinRepositores.SaveAsync();
         }
     }
 }

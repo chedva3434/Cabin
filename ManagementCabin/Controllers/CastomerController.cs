@@ -1,5 +1,9 @@
-﻿using Clean.Core.Models;
+﻿using AutoMapper;
+using Clean.Core.Models;
 using Clean.Core.Service;
+using ManagementCabin.Core.DTOs;
+using ManagementCabin.Models;
+using ManagementCabin.Service;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -12,44 +16,52 @@ namespace ManagementCabin.Controllers
     {
         private readonly ICastomerService _castomerService;
 
-        public CastomerController(ICastomerService castomerService)
+        private readonly IMapper _mapper;
+
+        public CastomerController(ICastomerService castomerService, IMapper mapper)
         {
             _castomerService = castomerService;
+            _mapper = mapper;
         }
 
         // GET: api/<CastomerController>
         [HttpGet]
-        public IEnumerable<Castomer> Get()
+        public ActionResult Get()
         {
-           return _castomerService.GetAll();
+            var list = _castomerService.GetAllAsync();
+            var listDto = _mapper.Map<IEnumerable<CastomerDto>>(list);
+            return Ok(listDto);
         }
 
         //// GET api/<CastomerController>/5
         [HttpGet("{id}")]
-        public Castomer Get(int id)
+        public ActionResult Get(int id)
         {
-            return _castomerService.GetById(id);
+            var cabin = _castomerService.GetByIdAsync(id);
+            var cabinDto = _mapper.Map<CastomerDto>(cabin);
+            return Ok(cabinDto);
         }
 
         // POST api/<CastomerController>
         [HttpPost]
-        public void Post([FromBody] Castomer value)
+        public void Post([FromBody] CastomerPostModel value)
         {
-            _castomerService.AddValue(value);
+            var CastomerToAdd = new Castomer { name=value.name,phone=value.phone };
+            _castomerService.AddValueAsync(CastomerToAdd);
         }
 
         // PUT api/<CastomerController>/5
         [HttpPut("{id}")]
         public void Put([FromBody] Castomer value)
         {
-            _castomerService.PutValue(value);
+            _castomerService.PutValueAsync(value);
         }
 
         // DELETE api/<CastomerController>/5
         [HttpDelete("{id}")]
         public void Delete(Castomer castomer)
         {
-           _castomerService.Delete(castomer);
+           _castomerService.DeleteAsync(castomer);
         }
     }
 }

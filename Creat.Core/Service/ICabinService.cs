@@ -9,10 +9,10 @@ namespace Clean.Core.Service
 {
     public interface ICabinService
     {
-        IEnumerable<Cabin> GetAll();
-        Cabin GetById(int id);
-        void AddValue(Cabin newCastomer);
-        void PutValue(Cabin cabin);
-        void Delete(Cabin cabin);
+        Task<IEnumerable<Cabin>> GetAllAsync();
+        Task<Cabin> GetByIdAsync(int id);
+        Task AddValueAsync(Cabin newCastomer);
+        Task PutValueAsync(Cabin cabin);
+        Task DeleteAsync(Cabin cabin);
     }
 }

@@ -8,8 +8,9 @@ C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Service\obj\Debug\net6.0\ManagementCabin.Service.AssemblyInfoInputs.cache
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Service\obj\Debug\net6.0\ManagementCabin.Service.AssemblyInfo.cs
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Service\obj\Debug\net6.0\ManagementCabin.Service.csproj.CoreCompileInputs.cache
-C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Service\obj\Debug\net6.0\ManagementCabin.Service.csproj.CopyComplete
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Service\obj\Debug\net6.0\ManagementCabin.Service.dll
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Service\obj\Debug\net6.0\refint\ManagementCabin.Service.dll
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Service\obj\Debug\net6.0\ManagementCabin.Service.pdb
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Service\obj\Debug\net6.0\ref\ManagementCabin.Service.dll
+C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Service\obj\Debug\net6.0\ManagementCabin.Service.sourcelink.json
+C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Service\obj\Debug\net6.0\Manageme.5BD949BB.Up2Date

@@ -12,7 +12,7 @@ namespace Clean.Core.Models
         public int Id { get; set; }
         public string name { get; set; }
         public string phone { get; set; }
-        static int count;
+        public int orderId { get; set; }
         public Order order { get; set; }
         //public Cabin cabin { get; set; }
         //public Castomer()

@@ -1,5 +1,8 @@
-﻿using Clean.Core.Models;
+﻿using AutoMapper;
+using Clean.Core.Models;
 using Clean.Core.Service;
+using ManagementCabin.Core.DTOs;
+using ManagementCabin.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Xml.Linq;
 
@@ -13,44 +16,51 @@ namespace ManagementCabin.Controllers
     {
         private readonly ICabinService _cabinService;
 
-        public CabinController(ICabinService cabinService)
+        private readonly IMapper _mapper;
+
+        public CabinController(ICabinService cabinService, IMapper mapper)
         {
             _cabinService = cabinService;
+            _mapper = mapper;
         }
 
         // GET: api/<CabinController>
         [HttpGet]
-        public IEnumerable<Cabin> Get()
+        public ActionResult Get()
         {
-      
-            return _cabinService.GetAll();
+            var list = _cabinService.GetAllAsync();
+            var listDto = _mapper.Map<CabinDto>(list);
+            return Ok(listDto);
         }
 
         [HttpGet("{id}")]
-        public Cabin Get(int id)
+        public ActionResult Get(int id)
         {
-           return _cabinService.GetById(id);
+            var cabin= _cabinService.GetByIdAsync(id);
+            var cabinDto=_mapper.Map<CabinDto>(cabin);
+            return Ok(cabinDto);
         }
 
         // POST api/<CabinController>
         [HttpPost]
-        public void Post([FromBody] Cabin value)
+        public async Task Post([FromBody] CabinPostModel value)
         {
-            _cabinService.AddValue(value);
+            var CabinToAdd=new Cabin {Name=value.Name,Price=value.Price,status=value.status };
+           await _cabinService.AddValueAsync(CabinToAdd);
         }
 
         // PUT api/<CabinController>/5
         [HttpPut("{id}")]
         public void Put( [FromBody] Cabin value)
         {
-           _cabinService.PutValue(value);
+           _cabinService.PutValueAsync(value);
         }
 
         // DELETE api/<CabinController>/5
         [HttpDelete("{id}")]
         public void Delete(Cabin cabin)
         {
-           _cabinService.Delete(cabin);
+           _cabinService.DeleteAsync(cabin);
         }
     }
 }

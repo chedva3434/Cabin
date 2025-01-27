@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "020roqRUMr3Sm34aLWCe4vOWkQnYxVrtSVL2Jofo9DIYlNyRM9aNUIMDok+taJ9Fj6iUln/o+gmpo9T7qkWJPQ==",
+  "dgSpecHash": "slYOx+rHhZQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\user1\\Documents\\חדוה תכנות\\שנה ב\\.net core\\ManagementCabin\\Clean.Service\\ManagementCabin.Service.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\user1\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\user1\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512"
+  ],
   "logs": []
 }

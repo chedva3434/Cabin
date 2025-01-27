@@ -3,6 +3,7 @@ using Clean.Core.Service;
 using Clean.Data;
 using Clean.Data.Repositores;
 using ManagementCabin;
+using ManagementCabin.Core;
 using ManagementCabin.Core.Repositores;
 using ManagementCabin.Data.Repositores;
 using ManagementCabin.Service;
@@ -32,7 +33,7 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddDbContext<DataContext>();
 //builder.Services.AddSingleton<DataContext>();
 
-
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

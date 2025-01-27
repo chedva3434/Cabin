@@ -18,32 +18,32 @@ namespace ManagementCabin.Service
             _orderRepositores = orderRepositores;
         }
 
-        public IEnumerable<Order> GetAll()
+        public async Task<IEnumerable<Order>> GetAllAsync()
         {
-            return _orderRepositores.Orders.GetAll();
+            return await Task.Run(()=> _orderRepositores.Orders.GetAll());
         }
 
-        public Order GetById(int id)
+        public async Task<Order> GetByIdAsync(int id)
         {
-            return _orderRepositores.Orders.GetById(id);
+            return await Task.Run(() => _orderRepositores.Orders.GetById(id));
         }
 
-        public void AddValue(Order newCastomer)
+        public async Task AddValueAsync(Order newCastomer)
         {
             _orderRepositores.Orders.Add(newCastomer);
-            _orderRepositores.Save();
+            await _orderRepositores.SaveAsync();
         }
 
-        public void PutValue(Order order)
+        public async Task PutValueAsync(Order order)
         {
             _orderRepositores.Orders.Update(order);
-            _orderRepositores.Save();
+            await _orderRepositores.SaveAsync();
         }
 
-        public void Delete(Order order)
+        public async Task DeleteAsync(Order order)
         {
             _orderRepositores.Orders.Delete(order);
-            _orderRepositores.Save();
+            await _orderRepositores.SaveAsync();
         }
     }
 }

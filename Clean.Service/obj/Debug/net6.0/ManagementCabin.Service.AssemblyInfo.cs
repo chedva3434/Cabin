@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ManagementCabin.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd4ee2e7f4a837bd9752ad4849f4e8279210e2b5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ManagementCabin.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ManagementCabin.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -9,9 +9,10 @@ C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\ManagementCabin.Data.AssemblyInfoInputs.cache
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\ManagementCabin.Data.AssemblyInfo.cs
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\ManagementCabin.Data.csproj.CoreCompileInputs.cache
-C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\ManagementCabin.Data.csproj.CopyComplete
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\ManagementCabin.Data.dll
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\refint\ManagementCabin.Data.dll
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\ManagementCabin.Data.pdb
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\ManagementCabin.Data.genruntimeconfig.cache
 C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\ref\ManagementCabin.Data.dll
+C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\ManagementCabin.Data.sourcelink.json
+C:\Users\user1\Documents\חדוה תכנות\שנה ב\.net core\ManagementCabin\Clean.Data\obj\Debug\net6.0\Manageme.7C3DE8F3.Up2Date

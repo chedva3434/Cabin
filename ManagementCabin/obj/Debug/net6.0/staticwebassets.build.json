@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "Z8zr8NWudkopyFZAFIVwJWVeN1rQXDnDSUdNPGpInmE=",
+  "Hash": "6FcLCDMoBBI3jTJdfbdzat5mo69joRZjCIzJHiXwsac=",
   "Source": "ManagementCabin",
   "BasePath": "_content/ManagementCabin",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

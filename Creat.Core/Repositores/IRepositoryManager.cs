@@ -16,6 +16,6 @@ namespace Clean.Core.Repositores
         public ICabinRepositores Cabin { get; }
         public ICastomerRepositores Castomer { get; }
         public IOrderRepositores Order { get; }
-        void Save();
+        Task SaveAsync();
     }
 }

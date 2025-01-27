@@ -30,9 +30,9 @@ namespace Clean.Data.Repositores
             Order = order;
         }
 
-        public void Save()
+        public async Task SaveAsync()
         {
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();  
         }
     }
 }
